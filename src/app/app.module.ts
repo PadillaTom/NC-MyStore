@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,38 +19,31 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { environment } from 'src/environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 
-export function tokenGetter(){
-  return sessionStorage.getItem(environment.TOKEN_NAME);
+export function tokenGetter() {
+  return sessionStorage.getItem('token');
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent
-  ],
+  declarations: [AppComponent, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule,  
+    FormsModule,
     ReactiveFormsModule,
 
-    MatButtonModule,    
+    MatButtonModule,
     MatMenuModule,
     MatIconModule,
     MatDividerModule,
     MatFormFieldModule,
     MatCardModule,
     MatToolbarModule,
-    HttpClientModule
+    HttpClientModule,
+  ],
+  exports: [],
 
-  
-  ],
-  exports: [
-    
-  ],
-  
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
