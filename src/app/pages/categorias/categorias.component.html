@@ -1,0 +1,11 @@
+<div class="categories-container">
+  <div class="categories-center">
+    <article class="single-category-container" *ngFor="let cat of categories">
+      <div class="category-img-container">
+        <img src="/assets/images/category_mochila.jpeg" alt="{{ cat.name }}" />
+      </div>
+      <!-- <span class="category-image"></span> -->
+      <h2>{{ cat.name }}</h2>
+    </article>
+  </div>
+</div>

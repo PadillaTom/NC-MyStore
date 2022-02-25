@@ -1,0 +1,38 @@
+<!-- Navigation Bar -->
+<nav class="nav-container">
+  <div class="nav-center">
+    <!-- TOP -->
+    <div class="nav-top">
+      <div class="nav-logo-container">
+        <img src="/assets/images/MyStoreLogo.png" alt="MyStore" />
+      </div>
+      <div class="nav-top-right">
+        <div class="nav-user-container">
+          <span routerLink="/login">Entrar</span>
+        </div>
+        <div class="nav-cart-container">
+          <mat-icon>shopping_bag</mat-icon>
+        </div>
+      </div>
+    </div>
+    <!-- BOT -->
+    <div class="nav-bot">
+      <div class="nav-ham-container">
+        <span class="material-icons"> menu </span>
+      </div>
+      <div class="nav-search-container">
+        <button mat-menu-item>
+          <mat-icon>search</mat-icon>
+          <span>Buscar</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Router Outlet -->
+<div class="outlet-container" style="padding-top: 5rem">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- Footer -->

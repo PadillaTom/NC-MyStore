@@ -1,0 +1,16 @@
+<section class="featured-container section">
+  <div class="section-title">
+    <h1>Los mas Populares</h1>
+  </div>
+  <div class="featured-center">
+    <article class="single-featured" *ngFor="let prod of products">
+      <div class="featured-img-container">
+        <img src="{{ prod.image.urlImage }}" alt="{{ prod.title }}" />
+      </div>
+      <div class="featured-info">
+        <h2>{{ prod.title }}</h2>
+        <span> {{ prod.price | currency: "EUR" }} </span>
+      </div>
+    </article>
+  </div>
+</section>

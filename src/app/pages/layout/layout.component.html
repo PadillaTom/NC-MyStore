@@ -1,0 +1,52 @@
+<div class="example-container">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <span class="example-spacer"></span>
+
+    <h1 class="example-app-name">MY STORE</h1>
+
+    <span class="example-spacer"></span>
+
+    <button
+      mat-menu-item
+      (click)="(sidenav)"
+      routerLink="/buscar"
+      style="cursor: pointer"
+    >
+      <mat-icon>search</mat-icon>
+      <span>Buscar</span>
+    </button>
+
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with shopping_cart icon"
+    >
+      <mat-icon>shopping_cart</mat-icon>
+      <!-- <span>Carrito</span> -->
+    </button>
+
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with account_box icon"
+    >
+      <mat-icon>account_box</mat-icon>
+      <!-- <span>Login</span> -->
+    </button>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu"> </mat-menu>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container">
+    <mat-sidenav #sidenav style="width: 200px" mode="push">
+      <img src="assets/icon.png" width="128" style="margin-left: 20px" />
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

@@ -1,0 +1,81 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// ---> MEDIA QUERIES <---
+@import "include-media.scss";
+// How to use:
+// @include media (">=phone" , "<=desktop")
+// 'phone': 375px,
+// 'tablet': 768px,
+// 'laptop': 992px,
+// 'desktop': 1250px,
+// 'LGdesktop': 1920px,
+
+// ---> FONTS <---
+
+// ---> GLOBALS <---
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 1.1rem;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+}
+a {
+  transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+}
+
+/* --------------------------------------------------- */
+/* --------------------- MAIN APP -------------------- */
+/* --------------------------------------------------- */
+
+/* ======================================================================== */
+/* 1. SECTION */
+/* ======================================================================== */
+.section {
+  width: 90%;
+  margin: 0 auto;
+  .section-title {
+    font-size: 1.7rem;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+    padding: 2rem 0rem;
+  }
+}
+/* ======================================================================== */
+/* 2. NOMBRE_COMPONENTE_O_PAGINA */
+/* ======================================================================== */
+
+/* ======================================================================== */
+/* 3. NOMBRE_COMPONENTE_O_PAGINA */
+/* ======================================================================== */
