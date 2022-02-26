@@ -14,12 +14,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { environment } from 'src/environments/environment';
+// import { environment } from 'src/environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 
-export function tokenGetter() {
-  return sessionStorage.getItem(environment.TOKEN_NAME);
-}
+// export function tokenGetter() {
+//   return sessionStorage.getItem(environment.TOKEN_NAME);
+// }
 
 @NgModule({
   declarations: [AppComponent],

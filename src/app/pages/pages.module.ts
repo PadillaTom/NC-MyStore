@@ -5,7 +5,7 @@ import { MaterialModule } from '../material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PagesRoutingModule } from './pages-routing.module';
 
-import { LayoutComponent } from './layout/layout.component';
+// import { LayoutComponent } from './layout/layout.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { HomeComponent } from './home/home.component';
@@ -27,7 +27,7 @@ import { LoginCustomComponent } from './login-custom/login-custom.component';
   declarations: [
     UsuariosComponent,
     CategoriasComponent,
-    LayoutComponent,
+    // LayoutComponent,
     HomeComponent,
     Not403Component,
     Not404Component,
