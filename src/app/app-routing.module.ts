@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutCustomComponent } from './pages/layout-custom/layout-custom.component';
-import { LayoutComponent } from './pages/layout/layout.component';
 import { LoginCustomComponent } from './pages/login-custom/login-custom.component';
-import { LoginComponent } from './pages/login/login.component';
 import { Not404Component } from './pages/not404/not404.component';
 
 const routes: Routes = [
