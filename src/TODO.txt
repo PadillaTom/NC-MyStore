@@ -1,0 +1,19 @@
+LOGIN - Negrito:
+FORM angular, devuelve un BODY (OBJETO)
+LOGIN (mando Objeto), response = Interface (Product, por ejemplo).
+
+
+PRODUCTS - Negrito:
+Recibir una interface (como DTO), nunca a la CLASE directa.
+
+
+FORMS - Errores :
+PIPE
+HandleError method.
+Variable contiene el status.
+html renderiza ngIf status === 404, mostrar <h2> NOT FOUND, por ejemplo
+
+
+// UNA VEZ TODO HECHO:
+el response tendra my token y email.
+Token va hacia interceptores.

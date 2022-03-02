@@ -1,0 +1,62 @@
+<section class="section">
+  <div class="section-title">
+    <h1>Detalles del Producto</h1>
+  </div>
+
+  <article class="details-container">
+    <div class="details-center">
+      <!-- IMG Carousel -->
+      <div class="carousel-container">
+        <img
+          src="{{ productImageUrl }}"
+          alt="{{ detailedProduct.name }}"
+          class="carousel-main-img"
+        />
+        <div class="carousel-gallery" *ngIf="detailedProduct.imagesPost">
+          <img
+            *ngFor="let img of detailedProduct.imagesPost"
+            src="{{ img.urlImage }}"
+            alt="{{ detailedProduct.name }}"
+          />
+        </div>
+      </div>
+      <!-- Description -->
+      <div class="description-container">
+        <!-- Rating -->
+        <div class="prod-rating-container">
+          <span>
+            {{ detailedProduct.rating }}
+          </span>
+          <mat-icon>star</mat-icon>
+        </div>
+        <!-- Name -->
+        <div class="prod-name-container">
+          <h2>{{ detailedProduct.name }}</h2>
+        </div>
+        <!-- Desc -->
+        <div class="prod-desc-container">
+          <p>
+            {{ detailedProduct.description }}
+          </p>
+        </div>
+        <!-- Stock -->
+        <div class="prod-stock-container">
+          <h3>
+            Disponible:
+            <span *ngIf="detailedProduct.stock > 0; else elseTemplate">
+              Si.
+            </span>
+            <ng-template #elseTemplate>
+              <span> No. </span>
+            </ng-template>
+          </h3>
+          <h3>
+            Stock:
+            <span> {{ detailedProduct.stock }} </span>
+          </h3>
+        </div>
+      </div>
+      <!--  -->
+    </div>
+  </article>
+</section>

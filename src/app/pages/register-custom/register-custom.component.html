@@ -1,0 +1,142 @@
+<div class="register-form-container">
+  <!-- Logo -->
+  <div class="form-logo-container">
+    <img src="/assets/images/MyStoreLogo.png" routerLink="/" alt="MyStore" />
+  </div>
+  <div class="register-form-center">
+    <!-- Form -->
+    <form #loginForm="ngForm" class="login-form">
+      <span>Nuevo Usuario</span>
+      <!-- Single Input -->
+      <div class="singleInput inputGroup1">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          class="username"
+          maxlength="256"
+          [(ngModel)]="username"
+          required
+        />
+      </div>
+      <!-- Single Input -->
+      <div class="singleInput">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="email"
+          maxlength="256"
+          [(ngModel)]="email"
+          required
+        />
+      </div>
+      <!-- Single Input -->
+      <div class="singleInput">
+        <label for="password">Contraseña</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="password"
+          required
+          minlength="8"
+          maxlength="16"
+          [(ngModel)]="password"
+        />
+      </div>
+      <!-- Single Input -->
+      <div class="singleInput">
+        <label for="name">Nombre</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="name"
+          maxlength="256"
+          [(ngModel)]="name"
+          required
+        />
+      </div>
+      <!-- Single Input -->
+      <div class="singleInput inputGroup1">
+        <label for="surname">Apellido</label>
+        <input
+          type="text"
+          id="surname"
+          name="surname"
+          class="surname"
+          maxlength="256"
+          [(ngModel)]="surname"
+          required
+        />
+      </div>
+      <!-- Single Input -->
+      <div class="singleInput inputGroup1">
+        <label for="country">Pais</label>
+        <input
+          type="text"
+          id="country"
+          name="country"
+          class="country"
+          maxlength="256"
+          [(ngModel)]="country"
+          required
+        />
+      </div>
+      <!-- Single Input -->
+      <div class="singleInput inputGroup1">
+        <label for="state">Provincia</label>
+        <input
+          type="text"
+          id="state"
+          name="state"
+          class="state"
+          maxlength="256"
+          [(ngModel)]="state"
+          required
+        />
+      </div>
+      <!-- Single Input -->
+      <div class="singleInput inputGroup1">
+        <label for="city">Ciudad</label>
+        <input
+          type="text"
+          id="city"
+          name="city"
+          class="city"
+          maxlength="256"
+          [(ngModel)]="city"
+          required
+        />
+      </div>
+      <!-- Single Input -->
+      <div class="singleInput inputGroup1">
+        <label for="imageProfile">Foto de Perfil</label>
+        <input
+          type="text"
+          id="imageProfile"
+          name="imageProfile"
+          class="imageProfile"
+          maxlength="256"
+          [(ngModel)]="imageProfile"
+          required
+        />
+        <div class="form-helpers-container">
+          <a routerLink="/login">Ya tienes una cuenta?</a>
+          <!-- <a routerLink="/recuperar">¿Olvidaste tu contraseña?</a> -->
+        </div>
+      </div>
+
+      <!-- Single Input 3 -->
+      <div class="inputGroup inputGroup3">
+        <button type="button" class="form-btn" (click)="register()">
+          Cear Cuenta
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

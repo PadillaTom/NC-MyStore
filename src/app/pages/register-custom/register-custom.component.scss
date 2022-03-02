@@ -1,0 +1,23 @@
+@import "/src/app/pages/login-custom/login-custom.component.scss";
+.register-form-container {
+  width: 100%;
+  height: 100vh;
+  background: #fafafa;
+  padding-top: 5rem;
+  .register-form-center {
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    padding-bottom: 4rem;
+  }
+}
+.login-form {
+  .singleInput {
+    margin: 1.2rem 1rem;
+    input[type="email"],
+    input[type="text"],
+    input[type="password"] {
+      height: 2.5rem;
+    }
+  }
+}

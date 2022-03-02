@@ -4,7 +4,10 @@
   </div>
   <div class="featured-center">
     <article class="single-featured" *ngFor="let prod of products">
-      <div class="featured-img-container">
+      <div
+        class="featured-img-container"
+        routerLink="/pages/product-details/{{ prod.id }}"
+      >
         <img src="{{ prod.image.urlImage }}" alt="{{ prod.title }}" />
       </div>
       <div class="featured-info">
