@@ -18,7 +18,7 @@
     <!-- BOT -->
     <div class="nav-bot">
       <div class="nav-ham-container">
-        <span class="material-icons"> menu </span>
+        <span class="material-icons" (click)="toggleSidebar()"> menu </span>
       </div>
       <div class="nav-search-container">
         <button mat-menu-item>
@@ -29,6 +29,9 @@
     </div>
   </div>
 </nav>
+
+<!-- Sidebar -->
+<app-sidebar *ngIf="sidebarToggle"></app-sidebar>
 
 <!-- Router Outlet -->
 <div class="outlet-container">

@@ -15,6 +15,7 @@ import { FeaturedProductsComponent } from './featured-products/featured-products
 import { LoginCustomComponent } from './login-custom/login-custom.component';
 import { RegisterCustomComponent } from './register-custom/register-custom.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   imports: [
@@ -37,6 +38,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     LoginCustomComponent,
     RegisterCustomComponent,
     ProductDetailsComponent,
+    SidebarComponent,
   ],
   providers: [],
 })

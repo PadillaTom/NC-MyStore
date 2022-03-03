@@ -129,8 +129,19 @@
   }
 }
 
-@media (min-width: 650px){
+@media (min-width: 650px) {
   .login-form {
     max-width: 30rem;
+  }
+}
+@media (min-width: 800px) {
+  .form-logo-container {
+    width: 27%;
+    top: 17%;
+  }
+}
+@media (min-width: 1100px) {
+  .form-logo-container {
+    width: 23%;
   }
 }

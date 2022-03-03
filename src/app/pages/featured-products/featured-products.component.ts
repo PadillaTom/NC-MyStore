@@ -9,6 +9,7 @@ import { ProductsService } from 'src/app/_service/products.service';
 })
 export class FeaturedProductsComponent implements OnInit {
   products: FeaturedProduct[];
+  myError: number = 200;
 
   constructor(private productsService: ProductsService) {}
 
@@ -17,9 +18,13 @@ export class FeaturedProductsComponent implements OnInit {
   }
 
   fetchFeaturedProducts() {
-    this.productsService.getFeaturedProducts().subscribe((data) => {
-      this.products = data;
-      // console.log(data);
+    this.productsService.getFeaturedProducts().subscribe({
+      next: (response) => {
+        this.products = response.slice(0, 8);
+      },
+      error: (err) => {
+        this.myError = err.status;
+      },
     });
   }
 }

@@ -6,6 +6,17 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 0.5rem;
     row-gap: 1.5rem;
+    // Not Found
+    .products-not-found {
+      width: 90vw;
+      text-align: center;
+      font-size: 1.7rem;
+      letter-spacing: 2px;
+      font-weight: 300;
+      line-height: normal;
+      color: crimson;
+    }
+    // Productos
     .single-featured {
       display: flex;
       flex-direction: column;
@@ -13,10 +24,10 @@
       &:hover .featured-img-container img {
         transform: scale(1.1);
       }
-      &:hover .featured-info h2{
+      &:hover .featured-info h2 {
         color: crimson;
       }
-      &:hover .featured-info span{
+      &:hover .featured-info span {
         color: crimson;
       }
       .featured-img-container {
@@ -35,7 +46,6 @@
           object-fit: cover;
           transition: 0.3s linear all;
         }
-       
       }
       .featured-info {
         margin-top: 0.2rem;
@@ -46,13 +56,13 @@
           font-weight: 300;
           letter-spacing: 1px;
           cursor: pointer;
-          transition: 0.3s linear all;       
+          transition: 0.3s linear all;
         }
         span {
           color: black;
           font-weight: 400;
           cursor: pointer;
-          transition: 0.3s linear all;        
+          transition: 0.3s linear all;
         }
       }
     }
@@ -61,28 +71,28 @@
 
 // ---> MEDIA QUERIES <---
 @media (min-width: 500px) {
-  .featured-container{
+  .featured-container {
     padding-top: 16%;
   }
 }
 @media (min-width: 700px) {
-  .featured-container{
+  .featured-container {
     padding-top: 10%;
   }
 }
 @media (min-width: 840px) {
-  .featured-container{
+  .featured-container {
     padding-top: 8%;
   }
 }
 @media (min-width: 900px) {
-  .featured-container{
+  .featured-container {
     padding-top: 12%;
-    .featured-center {      
+    .featured-center {
       grid-template-columns: repeat(3, 1fr);
       column-gap: 1.6rem;
       row-gap: 2.3rem;
-      .single-featured{
+      .single-featured {
         .featured-img-container {
           height: 18rem;
         }
@@ -91,24 +101,23 @@
           padding-left: 0.8rem;
           h2 {
             font-size: 1.2rem;
-            letter-spacing: 1.3px;           
+            letter-spacing: 1.3px;
           }
           span {
             font-weight: 400;
-            font-size: 1rem;           
+            font-size: 1rem;
           }
         }
       }
     }
   }
-  
 }
 @media (min-width: 1000px) {
-  .featured-container{
+  .featured-container {
     padding-top: 10%;
-    .featured-center {      
+    .featured-center {
       grid-template-columns: repeat(4, 1fr);
-      .single-featured{
+      .single-featured {
         .featured-img-container {
           height: 18rem;
         }
@@ -117,11 +126,11 @@
   }
 }
 @media (min-width: 1200px) {
-  .featured-container{
+  .featured-container {
     padding-top: 8%;
-    .featured-center {      
+    .featured-center {
       grid-template-columns: repeat(5, 1fr);
-      .single-featured{
+      .single-featured {
         .featured-img-container {
           height: 18rem;
         }

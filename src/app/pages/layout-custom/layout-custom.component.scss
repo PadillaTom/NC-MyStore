@@ -157,3 +157,36 @@
     }
   }
 }
+
+@media (min-width: 900px) {
+  .nav-container {
+    padding-bottom: 1.3rem;
+    .nav-center {
+      width: 85%;
+      row-gap: 0.7rem;
+    }
+  }
+  .nav-top {
+    .nav-logo-container {
+      img {
+        width: 8rem;
+      }
+    }
+    .nav-top-right {
+      font-size: 1.1rem;
+      letter-spacing: 1.3px;
+      .nav-cart-container {
+        mat-icon {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+  .nav-bot {
+    .nav-ham-container {
+      span {
+        font-size: 2rem;
+      }
+    }
+  }
+}

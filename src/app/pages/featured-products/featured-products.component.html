@@ -3,6 +3,9 @@
     <h1>Los mas Populares</h1>
   </div>
   <div class="featured-center">
+    <span *ngIf="myError == 404" class="products-not-found">
+      No existen Productos...
+    </span>
     <article class="single-featured" *ngFor="let prod of products">
       <div
         class="featured-img-container"

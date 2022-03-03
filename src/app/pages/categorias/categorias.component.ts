@@ -18,8 +18,10 @@ export class CategoriasComponent implements OnInit {
 
   listCategories() {
     this.categoryService.getCategories().subscribe((data) => {
+      if (data.length > 6) {
+        this.categories = data.slice(0, 6);
+      }
       this.categories = data;
-      // console.log(data);
     });
   }
 }
