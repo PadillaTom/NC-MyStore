@@ -12,8 +12,27 @@
   }
 }
 .login-form {
+  // Submit Error:
+  p {
+    text-align: center;
+    width: 100%;
+    color: crimson;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    font-size: 0.9rem;
+    transition: 0.3s linear all;
+  }
   .singleInput {
     margin: 1.2rem 1rem;
+    // Validators
+    .validation-container {
+      position: absolute;
+      top: 0%;
+      right: 3%;
+      font-size: 0.7rem;
+      letter-spacing: 0.3px;
+      color: crimson;
+    }
     input[type="email"],
     input[type="text"],
     input[type="password"] {

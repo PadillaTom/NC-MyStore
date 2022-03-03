@@ -14,9 +14,11 @@
         />
         <div class="carousel-gallery" *ngIf="detailedProduct.imagesPost">
           <img
-            *ngFor="let img of detailedProduct.imagesPost"
+            *ngFor="let img of detailedProduct.imagesPost; let myIndex = index"
             src="{{ img.urlImage }}"
             alt="{{ detailedProduct.name }}"
+            [class.active-img]="selectedIndex === myIndex"
+            (click)="setIndex(myIndex)"
           />
         </div>
       </div>

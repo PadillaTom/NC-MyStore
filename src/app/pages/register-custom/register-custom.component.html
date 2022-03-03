@@ -5,125 +5,221 @@
   </div>
   <div class="register-form-center">
     <!-- Form -->
-    <form #loginForm="ngForm" class="login-form">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="login-form">
       <span>Nuevo Usuario</span>
       <!-- Single Input -->
       <div class="singleInput inputGroup1">
         <label for="username">Username</label>
+        <!-- Validation -->
+        <div
+          *ngIf="username.invalid && (username.dirty || username.touched)"
+          class="validation-container"
+        >
+          <div
+            *ngIf="
+              username.errors['required'] ||
+              username.errors['notOnlyWhitespace'] == true
+            "
+          >
+            Campo Requerido
+          </div>
+          <div *ngIf="username.errors['minlength']">Min. 2 caracteres</div>
+        </div>
+        <!-- End Validation -->
         <input
           type="text"
           id="username"
           name="username"
-          class="username"
-          maxlength="256"
-          [(ngModel)]="username"
+          formControlName="username"
           required
         />
       </div>
       <!-- Single Input -->
       <div class="singleInput">
         <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          class="email"
-          maxlength="256"
-          [(ngModel)]="email"
-          required
-        />
+        <!-- Validation -->
+        <div
+          *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="validation-container"
+        >
+          <div
+            *ngIf="
+              email.errors['pattern'] ||
+              email.errors['notOnlyWhitespace'] == true
+            "
+          >
+            Debe ser un e-mail valido.
+          </div>
+        </div>
+        <!-- End Validation -->
+        <input type="email" id="email" name="email" formControlName="email" />
       </div>
       <!-- Single Input -->
       <div class="singleInput">
         <label for="password">Contraseña</label>
+        <!-- Validation -->
+        <div
+          *ngIf="password.invalid && (password.dirty || password.touched)"
+          class="validation-container"
+        >
+          <div
+            *ngIf="
+              password.errors['required'] ||
+              password.errors['notOnlyWhitespace'] == true
+            "
+          >
+            Campo Requerido
+          </div>
+          <div *ngIf="password.errors['minlength']">Min. 2 caracteres</div>
+        </div>
+        <!-- End Validation -->
         <input
           type="password"
           id="password"
           name="password"
-          class="password"
           required
-          minlength="8"
-          maxlength="16"
-          [(ngModel)]="password"
+          formControlName="password"
         />
       </div>
       <!-- Single Input -->
       <div class="singleInput">
         <label for="name">Nombre</label>
+        <!-- Validation -->
+        <div
+          *ngIf="name.invalid && (name.dirty || name.touched)"
+          class="validation-container"
+        >
+          <div
+            *ngIf="
+              name.errors['required'] ||
+              name.errors['notOnlyWhitespace'] == true
+            "
+          >
+            Campo Requerido
+          </div>
+          <div *ngIf="name.errors['minlength']">Min. 2 caracteres</div>
+        </div>
+        <!-- End Validation -->
         <input
           type="text"
           id="name"
           name="name"
-          class="name"
-          maxlength="256"
-          [(ngModel)]="name"
+          formControlName="name"
           required
         />
       </div>
       <!-- Single Input -->
       <div class="singleInput inputGroup1">
         <label for="surname">Apellido</label>
+        <!-- Validation -->
+        <div
+          *ngIf="surname.invalid && (surname.dirty || surname.touched)"
+          class="validation-container"
+        >
+          <div
+            *ngIf="
+              surname.errors['required'] ||
+              surname.errors['notOnlyWhitespace'] == true
+            "
+          >
+            Campo Requerido
+          </div>
+          <div *ngIf="surname.errors['minlength']">Min. 2 caracteres</div>
+        </div>
+        <!-- End Validation -->
         <input
           type="text"
           id="surname"
           name="surname"
           class="surname"
           maxlength="256"
-          [(ngModel)]="surname"
+          formControlName="surname"
           required
         />
       </div>
       <!-- Single Input -->
       <div class="singleInput inputGroup1">
         <label for="country">Pais</label>
+        <!-- Validation -->
+        <div
+          *ngIf="country.invalid && (country.dirty || country.touched)"
+          class="validation-container"
+        >
+          <div
+            *ngIf="
+              country.errors['required'] ||
+              country.errors['notOnlyWhitespace'] == true
+            "
+          >
+            Campo Requerido
+          </div>
+          <div *ngIf="country.errors['minlength']">Min. 2 caracteres</div>
+        </div>
+        <!-- End Validation -->
         <input
           type="text"
           id="country"
           name="country"
-          class="country"
-          maxlength="256"
-          [(ngModel)]="country"
+          formControlName="country"
           required
         />
       </div>
       <!-- Single Input -->
       <div class="singleInput inputGroup1">
         <label for="state">Provincia</label>
+        <!-- Validation -->
+        <div
+          *ngIf="state.invalid && (state.dirty || state.touched)"
+          class="validation-container"
+        >
+          <div
+            *ngIf="
+              state.errors['required'] ||
+              state.errors['notOnlyWhitespace'] == true
+            "
+          >
+            Campo Requerido
+          </div>
+          <div *ngIf="state.errors['minlength']">Min. 2 caracteres</div>
+        </div>
+        <!-- End Validation -->
         <input
           type="text"
           id="state"
           name="state"
-          class="state"
-          maxlength="256"
-          [(ngModel)]="state"
+          formControlName="state"
           required
         />
       </div>
       <!-- Single Input -->
       <div class="singleInput inputGroup1">
         <label for="city">Ciudad</label>
+        <!-- Validation -->
+        <div
+          *ngIf="city.invalid && (city.dirty || city.touched)"
+          class="validation-container"
+        >
+          <div
+            *ngIf="
+              city.errors['required'] ||
+              city.errors['notOnlyWhitespace'] == true
+            "
+          >
+            Campo Requerido
+          </div>
+          <div *ngIf="city.errors['minlength']">Min. 2 caracteres</div>
+        </div>
+        <!-- End Validation -->
         <input
           type="text"
           id="city"
           name="city"
-          class="city"
-          maxlength="256"
-          [(ngModel)]="city"
+          formControlName="city"
           required
         />
       </div>
       <!-- Single Input -->
       <div class="singleInput inputGroup1">
-        <label for="imageProfile">Foto de Perfil</label>
-        <input
-          type="text"
-          id="imageProfile"
-          name="imageProfile"
-          class="imageProfile"
-          maxlength="256"
-          [(ngModel)]="imageProfile"
-          required
-        />
         <div class="form-helpers-container">
           <a routerLink="/login">Ya tienes una cuenta?</a>
           <!-- <a routerLink="/recuperar">¿Olvidaste tu contraseña?</a> -->
@@ -132,7 +228,8 @@
 
       <!-- Single Input 3 -->
       <div class="inputGroup inputGroup3">
-        <button type="button" class="form-btn" (click)="register()">
+        <p *ngIf="myError != 200">Ocurrio un error.</p>
+        <button type="submit" class="form-btn">
           Cear Cuenta
           <i class="fa fa-sign-in" aria-hidden="true"></i>
         </button>

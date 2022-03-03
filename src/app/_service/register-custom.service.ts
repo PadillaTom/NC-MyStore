@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { retry } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -10,26 +12,10 @@ export class RegisterCustomService {
 
   constructor(private httpClient: HttpClient, private router: Router) {}
 
-  register(
-    username: string,
-    email: string,
-    password: string,
-    name: string,
-    surname: string,
-    country: string,
-    state: string,
-    city: string,
-    imageProfile: string
-  ) {
-    return this.httpClient.post(this.url, {
-      username: username,
-      email: email,
-      password: password,
-      name: name,
-      surname: surname,
-      country: country,
-      state: state,
-      city: city,
-    });
+  register(formValues: FormGroup) {
+    return this.httpClient.post(this.url, formValues).pipe(retry(1));
   }
+  // TODO:
+  // Recibir el OBJETO del FORM (type : Register)
+  // VER INTERFACES / CLASES de tipo Register.
 }

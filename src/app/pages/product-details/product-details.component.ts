@@ -12,7 +12,7 @@ export class ProductDetailsComponent implements OnInit {
   detailedProduct: Product = new Product();
   productImageUrl: string;
   stars: number = 0;
-  halfStar: number = 0;
+  selectedIndex: number = null;
 
   constructor(
     private productService: ProductsService,
@@ -33,6 +33,7 @@ export class ProductDetailsComponent implements OnInit {
       this.stars = data.rating;
     });
   }
-
-  constructStars(rating: number) {}
+  setIndex(index: number) {
+    this.selectedIndex = index;
+  }
 }
