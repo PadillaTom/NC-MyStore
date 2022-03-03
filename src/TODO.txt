@@ -1,19 +1,34 @@
-LOGIN - Negrito:
-FORM angular, devuelve un BODY (OBJETO)
-LOGIN (mando Objeto), response = Interface (Product, por ejemplo).
+
+============
+Utils
+============
+// ---> MEDIA QUERIES <---
+@import "include-media.scss";
+// How to use:
+// @include media (">=phone" , "<=desktop")
+// 'phone': 375px,
+// 'tablet': 768px,
+// 'laptop': 992px,
+// 'desktop': 1250px,
+// 'LGdesktop': 1920px,
 
 
-PRODUCTS - Negrito:
-Recibir una interface (como DTO), nunca a la CLASE directa.
+
+============
+Refactors
+============
+
+INTERFACE (Negrito):
+Cada GET recibira una response, que nosotros tomaeremos en una Interface(como DTO), 
+nunca a la CLASE directa.
+
+JWT:
+Register & Login - La response tendra my token y email, pedir ROLE también.
+Token va hacia interceptores y se insertaran en cada Header de cada HttpRequest.
 
 
-FORMS - Errores :
-PIPE
-HandleError method.
-Variable contiene el status.
-html renderiza ngIf status === 404, mostrar <h2> NOT FOUND, por ejemplo
 
 
-// UNA VEZ TODO HECHO:
-el response tendra my token y email.
-Token va hacia interceptores.
+============
+FALTA
+============

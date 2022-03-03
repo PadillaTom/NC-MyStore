@@ -10,7 +10,7 @@ import { ProductsService } from 'src/app/_service/products.service';
 })
 export class ProductDetailsComponent implements OnInit {
   detailedProduct: Product = new Product();
-  productImageUrl: string;
+  activeImageUrl: string;
   stars: number = 0;
   selectedIndex: number = null;
 
@@ -29,11 +29,12 @@ export class ProductDetailsComponent implements OnInit {
     const prodId: number = +this.route.snapshot.paramMap.get('id');
     this.productService.getProductDetails(prodId).subscribe((data) => {
       this.detailedProduct = data;
-      this.productImageUrl = data.imageProfile.urlImage;
+      this.activeImageUrl = data.imageProfile.urlImage;
       this.stars = data.rating;
     });
   }
-  setIndex(index: number) {
+  setIndex(index: number, url: string) {
     this.selectedIndex = index;
+    this.activeImageUrl = url;
   }
 }

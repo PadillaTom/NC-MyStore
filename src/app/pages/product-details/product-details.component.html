@@ -8,7 +8,7 @@
       <!-- IMG Carousel -->
       <div class="carousel-container">
         <img
-          src="{{ productImageUrl }}"
+          src="{{ activeImageUrl }}"
           alt="{{ detailedProduct.name }}"
           class="carousel-main-img"
         />
@@ -18,7 +18,7 @@
             src="{{ img.urlImage }}"
             alt="{{ detailedProduct.name }}"
             [class.active-img]="selectedIndex === myIndex"
-            (click)="setIndex(myIndex)"
+            (click)="setIndex(myIndex, img.urlImage)"
           />
         </div>
       </div>
